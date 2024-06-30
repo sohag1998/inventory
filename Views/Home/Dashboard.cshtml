@@ -1,0 +1,119 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using inventory.Models
+
+
+
+@{
+    List<Equipment> equipment = Equipment.EquipmentList();
+    List<Equipment> assignedMember = Equipment.AssignedMemberList();
+}
+
+<div class="content-wrapper">
+    <!-- ============ Dashboard Top Conetnt ===================-->
+    <h2 class="mx-2 mt-2">Welcome To SInVentory Dashboard @Session["User"]</h2>
+    <!-- ============ Admin show and order status ===================-->
+    <section>
+        <div class="all-admin my-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 my-2">
+                        <div class="admin-list">
+                            <div class="list-header">
+                                <p class="admin-ac-title">Product List</p>
+                                <button class="btn btn-primary">+</button>
+                            </div>
+
+                            <div class="order-table-sec responsive-order-table">
+                                @{
+                                    if (equipment != null)
+                                    {
+                                        <table id="order-list-table" class="table table-striped" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    
+                                                    <th>Name</th>
+                                                    <th>In Stock</th>
+                                                    <th>Purchase Date</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @{
+                                                    foreach (Equipment obj in equipment)
+                                                    {
+                                                        <tr>
+                                                            <td>@obj.Name</td>
+                                                            <td>@obj.Count.ToString()</td>
+                                                            <td>@obj.DateTime</td>
+
+                                                        </tr>
+
+                                                    }
+                                                }
+
+                                            </tbody>
+                                        </table>
+                                    }
+                                    else{
+                                        <p>No Data Found</p>
+
+                                    }
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 my-2">
+                        <div class="admin-list">
+                            <div class="list-header">
+                                <p class="admin-ac-title">Assigned Member List</p>
+                                <button class="btn btn-primary">+</button>
+                            </div>
+                            <div class="order-table-sec responsive-order-table">
+                                @{
+                                    if (assignedMember != null)
+                                    {
+                                        <table id="equipment-assign-table" class="table table-striped" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Member Name</th>
+                                                    <th>Member Designation</th>
+                                                    <th>Phone Number</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @{
+                                                    foreach (Equipment assignedObj in assignedMember)
+                                                    {
+                                                        <tr>
+                                                            <td>@assignedObj.Name</td>
+                                                            <td>@assignedObj.Member.MemberName</td>
+                                                            <td>@assignedObj.Member.MemberDesignation</td>
+                                                            <td>@assignedObj.Member.MemberMobileNumber</td>
+
+                                                        </tr>
+                                                    }
+                                                }
+
+                                            </tbody>
+                                        </table>
+                                    }
+                                    else {
+                                        <p>No Data Found</p>
+                                    }
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</div>

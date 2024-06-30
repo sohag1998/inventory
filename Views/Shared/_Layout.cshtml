@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SInVentory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="~/Content/assets/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/assets/css/dataTables/dataTables.dataTables.css" />
+    <link rel="stylesheet" href="~/Content/assets/css/preload.css">
+    <link rel="stylesheet" href="~/Content/assets/css/sass.css">
+    <link rel="stylesheet" href="~/Content/assets/css/layout.css">
+    <link rel="stylesheet" href="~/Content/assets/css/style.css">
+    <link rel="stylesheet" href="~/Content/assets/css/reponsive.css">
+</head>
+<body>
+    <!-- ==========Website Preloader===========-->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <div class="main-wraper">
+        <!-- --Navbar Start--- -->
+        <div class="header-container">
+            <header class="header navbar navbar-expand-sm expand-header">
+                <div class="header-left d-flex">
+                    <div class="logo">
+                        <a href="#">SdevEngine</a>
+                    </div>
+                    <a href="#" class="sidebarcollapse" data-placement="bottom">
+                        <span class="fas fa-bars"></span>
+                    </a>
+                </div>
+                <div class="search-bar">
+                    <form action="" class="search-bar-form">
+                        <div class="search-bar-conent">
+                            <span class="fas fa-search"></span>
+                            <input type="text">
+                        </div>
+                    </form>
+                </div>
+                <ul class="navbar-item flex-row ml-auto">
+                    <li class="nav-item dropdown user-profile-dropdown">
+                        <a href="#" class="nav-link user" id="notify" data-bs-toggle="dropdown">
+                            <img src="~/Content/assets/img/bell.png" alt="user" class="icon">
+                            <p class="count bg-cla">9</p>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dp-main-menu">
+                                <a href="#" class="dropdown-item message-item">
+                                    <img src="~/Content/assets/img/hosting-server.png" alt="server" class="note-img">
+                                    <div class="notify-info-dismiss">
+                                        <div class="user-notify-info">
+                                            <p class="note-name">Server rebot</p>
+                                            <p class="note-time">20 min ago</p>
+                                        </div>
+                                        <p class="status-link"><span class="fas fa-times"></span></p>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item message-item">
+                                    <img src="~/Content/assets/img/heart.png" alt="server" class="note-img">
+                                    <div class="notify-info-dismiss">
+                                        <div class="user-notify-info">
+                                            <p class="note-name">Loved your work</p>
+                                            <p class="note-time">50 min ago</p>
+                                        </div>
+                                        <p class="status-link"><span class="fas fa-times"></span></p>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item message-item">
+                                    <img src="~/Content/assets/img/mark.png" alt="server" class="note-img">
+                                    <div class="notify-info-dismiss">
+                                        <div class="user-notify-info">
+                                            <p class="note-name">Server don't work</p>
+                                            <p class="note-time">5 min ago</p>
+                                        </div>
+                                        <p class="status-link"><span class="fas fa-times"></span></p>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item message-item">
+                                    <img src="~/Content/assets/img/document.png" alt="server" class="note-img">
+                                    <div class="notify-info-dismiss">
+                                        <div class="user-notify-info">
+                                            <p class="note-name">Rafi sent a file</p>
+                                            <p class="note-time">40 min ago</p>
+                                        </div>
+                                        <p class="status-link"><span class="fas fa-times"></span></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown user-profile-dropdown">
+                        <a href="#" class="nav-link user" id="notify" data-bs-toggle="dropdown">
+                            <img src="~/Content/assets/img/chat.png" alt="message" class="icon">
+                            <p class="count bg-cla">4</p>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dp-main-menu">
+                                <a href="#" class="dropdown-item message-item">
+                                    <img src="~/Content/assets/img/user-img-1.jpeg" alt="server" class="user-m-img">
+                                    <div class="user-notify-info">
+                                        <p class="user-m-name">Md Sohag Hossain</p>
+                                        <p class="user-m-role">Super Admin</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item message-item">
+                                    <img src="~/Content/assets/img/user-img-3.jpg" alt="server" class="user-m-img">
+                                    <div class="user-notify-info">
+                                        <p class="user-m-name">Zamiul Islam Himel</p>
+                                        <p class="user-m-role">Co Admin</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item message-item">
+                                    <img src="~/Content/assets/img/user-img-2.jpeg" alt="server" class="user-m-img">
+                                    <div class="user-notify-info">
+                                        <p class="user-m-name">Sayma Sadia</p>
+                                        <p class="user-m-role">Writer</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item message-item">
+                                    <img src="~/Content/assets/img/user-img-4.jpeg" alt="server" class="user-m-img">
+                                    <div class="user-notify-info">
+                                        <p class="user-m-name">Mizanur Rahaman</p>
+                                        <p class="user-m-role">Admin</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown user-profile-dropdown">
+                        <a href="#" class="nav-link user" id="notify" data-bs-toggle="dropdown">
+                            <img src="~/Content/assets/img/profile.png" alt="user" class="icon">
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="user-profile-section">
+                                <div class="media mx-auto">
+                                    <img src="~/Content/assets/img/profile.png" alt="Md Sohag Hossain" class="img-fluid mr-2">
+                                    <div class="media-body">
+                                        <h5>Md Sohag Hossain</h5>
+                                        <p>Super Admin</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-main-menu profile-setting">
+                                <a href="#" class="dropdown-item"><span class="fas fa-user"></span>Profile</a>
+                                <a href="#" class="dropdown-item"><span class="fas fa-inbox"></span>Inbox</a>
+                                <a href="#" class="dropdown-item"><span class="fas fa-lock-open"></span>Lock Screen</a>
+                                <a href="#" class="dropdown-item"><span class="fas fa-outdent"></span>Log out</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown user-profile-dropdown">
+                        <a href="" class="nav-link user" id="notify" data-bs-toggle="dropdown">
+                            <img src="~/Content/assets/img/setting.png" alt="user" class="icon">
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dp-main-menu setting-dp">
+                                <a href="#" class="dropdown-item"><span class="fas fa-plug"></span>Permission</a>
+                                <a href="#" class="dropdown-item"><span class="fas fa-users"></span>Admin</a>
+                                <a href="#" class="dropdown-item"><span class="fas fa-object-ungroup"></span>Design Pattern</a>
+                                <a href="#" class="dropdown-item"><span class="fas fa-palette"></span>Color</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </header>
+        </div>
+        <!-- --Navbar End---- -->
+        <!-- --Sidebar Start---- -->
+        <div class="left-menu">
+            <div class="menubar-content">
+                <nav class="animated bounceInDown">
+                    <ul id="sidebar">
+                        <li class="active">
+                            <a href="#"><i class="fas fa-home"></i>Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-bell"></i>Notification</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-regular fa-message"></i></i>Message</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-gear"></i>Widgets</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-bullseye"></i>UI Elements</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-chart-line"></i>Advanced UI</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-paper-plane"></i>Form Elements</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-pen-to-square"></i>Editors</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-chart-line"></i>Charts</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-table"></i></i>Tables</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i>Popups</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fa-solid fa-icons"></i>Icons</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-location-dot"></i>Maps</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-bug"></i>Error Pages</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fa-solid fa-check"></i>General pages</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-brands fa-shopify"></i>E-commerce</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-envelope"></i>E-mail</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-calendar-days"></i>Calender</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-circle-check"></i>Todo List</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-brands fa-envira"></i>Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-book"></i>Documentation</a>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="#">
+                                <i class="fas fa-cogs"></i>Settings
+                                <div class="fas fa-caret-down right"></div>
+                            </a>
+                            <ul class="left-menu-dp">
+                                <li><a href="#"><i class="fas fa-user-circle"></i>Account</a></li>
+                                <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+                                <li><a href="#"><i class="fas fa-fingerprint"></i>Security &amp; Privacy</a></li>
+                                <li><a href="#"><i class="fas fa-key"></i>Password</a></li>
+                            </ul>
+
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-outdent"></i>Log Out</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- --Sidebar End---- -->
+        <!-- ============ Dashboard Conetnt ===================-->
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="~/Scripts//js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/js/dataTables/dataTables.js"></script>
+    <script src="~/Scripts//js/main.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

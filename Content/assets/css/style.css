@@ -1,0 +1,124 @@
+/*============= Content Design============*/
+.content-wrapper {
+  margin-left: 240px;
+  margin-top: 60px;
+  transition: 0.5s;
+}
+
+.content-wrapper.hide {
+  margin-left: 0;
+}
+
+/* ============ Admin show and order status =================== */
+.admin-list {
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--white-color);
+  box-shadow: -2px 3px 13px 0px rgb(207 200 200 / 55%);
+  overflow: hidden;
+}
+
+p.admin-ac-title {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 0 5px;
+  display: inline-block;
+  border-bottom: 2px solid var(--main-color);
+  line-height: 1.5;
+  margin-bottom: 13px;
+}
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+table.dataTable {
+  overflow: hidden;
+}
+
+table.dataTable tbody > tr:nth-child(odd) > td {
+  background: rgba(245, 245, 245, 0);
+}
+
+.order-table-sec #order-list-table > thead > tr > th {
+  outline: none !important;
+}
+
+.order-table-sec #order-list-table > thead > tr > th:hover {
+  outline: none !important;
+}
+
+.dt-layout-cell.dt-start label {
+  text-transform: capitalize;
+  margin-left: 5px;
+}
+div.dt-container select.dt-input {
+  padding: 2px;
+  border-color: #ddd;
+}
+
+div.dt-container .dt-search input {
+  padding: 5px 8px;
+  border-color: #ddd;
+}
+
+table.dataTable > thead > tr > th,
+table.dataTable > tbody > tr > td {
+  border-bottom: 1px solid #ddd;
+  text-align: center !important;
+}
+table.dataTable > tbody > tr > td {
+  padding: 5px 10px;
+}
+
+table.dataTable tbody > tr:last-child {
+  border-bottom: 1px solid #ddd !important;
+}
+
+table.dataTable tbody > tr:last-child > td {
+  border-bottom: 1px solid #ddd !important;
+}
+
+table.dataTable th.dt-type-numeric,
+table.dataTable th.dt-type-date,
+table.dataTable td.dt-type-numeric,
+table.dataTable td.dt-type-date {
+  text-align: left;
+}
+
+#order-list-table a.status-btn {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white-color);
+  background: #ddd;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+div.dt-container div.dt-layout-row {
+  padding-top: 5px;
+}
+button.dt-paging-button {
+  padding: 5px 10px !important;
+  line-height: 15px !important;
+  font-size: 12px !important;
+  background: transparent !important;
+  border: 1px solid transparent;
+}
+button.dt-paging-button.disabled {
+  background: #979499 !important;
+}
+
+button.dt-paging-button:hover {
+  background: #6a9b74 !important;
+  border: 1px solid transparent !important;
+}
+button.dt-paging-button.current {
+  color: var(--white-color) !important;
+  background: #6a9b74 !important;
+  border: 1px solid transparent !important;
+}
