@@ -24,7 +24,7 @@ namespace inventory.Models
             {
                 int num = rnd.Next(1, 30);
                 Equipment equipment = new Equipment();
-                equipment.Name = "I Phone - " + i.ToString();
+                equipment.Name = "i Phone - " + i.ToString();
                 equipment.Count = num;
                 equipment.DateTime = DateTime.Now.Date;
                 list.Add(equipment);
@@ -39,7 +39,7 @@ namespace inventory.Models
             for(int i=1; i<=30; i++)
             {
                 Equipment equipment = new Equipment();
-                equipment.Name = "I Phone - " + i.ToString();
+                equipment.Name = "i Phone - " + i.ToString();
                 equipment.Member.MemberName = "Member " + i.ToString();
                 equipment.Member.MemberDesignation = "SKA" + i.ToString();
                 equipment.Member.MemberMobileNumber = "016388787" + i.ToString();

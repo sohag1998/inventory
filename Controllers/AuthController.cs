@@ -22,7 +22,7 @@ namespace inventory.Controllers
             {
                 return View(Model);
             }
-            if (Model.userName == "sohag" && Model.password == "12345")
+            if (Model.userName == "Sohag" && Model.password == "12345")
             {
                 Session["User"] = Model.userName;
                 ViewBag.Message = "Login Success";
